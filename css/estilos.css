@@ -23,8 +23,17 @@
       prefijo (-webkit, -moz, -o, -ms, etc.) de proveedor de navegador 
       para aumentar la compatibilidad con la mayoría de los navegadores 
       web.
+  5.- El esquema estructural para la versión mobile se va ajustando de 
+      acuerdo al ancho de disponible para los sistemas flexbox. Lo que 
+      hará que se muestren más de una columna para dispositivos móviles
+      como tablets (ancho intermedio entre versión desktop y anchos mas
+      delgados como celulares). En este sentido se aprovechará la 
+      disponibilidad del ancho en este tipo de dispositivos. Para dispo-
+      sitivos más pequeños como celulares de diferentes proveedores se
+      mostrará una sola columna cumpliendo con el requerimiento solici-
+      tado en la evaluación.
 
-  Autor: Jorge Elieser Garrido Sejas;
+  Autor: Jorge Elieser Garrido Seijas;
 
 **********************************************************************/
 
