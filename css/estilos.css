@@ -69,7 +69,7 @@ img {
 /* CONSIDERACIONES GENERALES. 
    Se especifica media queries para cumplir con punto 5 de las
    consideraciones generasl. */
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .contenido {
     /* CONSIDERACIONES GENERALES. 
        Se señala ancho de 900px para cumplir con requerimiento del
@@ -80,14 +80,33 @@ img {
        dientes para centrar el DIV contenedor y cumplir con el re-
        querimiento del punto 4 de las consideraciones generales. */
     margin: 0 auto;
+  }
 
+  header {
+    /* NSEF.
+       Se establece la altura del header de 60px por criterio estético 
+       del usuario en versión para desktop. */
+    height: 60px;
+  }
+
+  .cabecera_ttl {
+    /* NSEF. 
+       Se establece margen izquierdo de 15px por criterio estético. */
+    margin-left: 15px;
+  }
+
+  .cabecera_nav {
+    /* NSEF.
+       Se establece el margen derecho a 15px para la versión de escritorio
+       por criterio de estética del autor. */
+    margin-right: 15px;
   }
 }
 
 /* CONSIDERACIONES GENERALES. 
    Se especifica media queries para cumplir con punto 5 de las
    consideraciones generales. */
-@media (min-width: 581px and max-width: 899px) {
+@media screen and (max-width: 899px) {
   .contenido {
     /* CONSIDERACIONES GENERALES. 
        Se señala ancho de 100% para cumplir con requerimiento del
@@ -95,9 +114,52 @@ img {
     width: 100%;
     margin: 0 auto;
 
-
-
+    /* NSEF.
+       Se establece a 300px el ancho mínimo del contenedor principal por 
+       criterio estético del autor para móviles. */
+    min-width: 300px;
   }
+
+  .cabecera_ttl {
+    /* CONSIDERACION FINAL.
+       Solo para la versión móvil muestra centrado el menú y debajo del 
+       título. */
+    width: 100%;
+    text-align: center;
+
+    /* NSEF.
+       Se establecen márgenes izquierdo por criterio de estética
+       del autor para versión mobile. */
+    margin-left: 0px;
+  }
+
+  .cabecera_nav {
+    /* CONSIDERACION FINAL.
+       Solo para la versión móvil muestra centrado el menú y debajo del 
+       título. */
+    width: 100%;
+    text-align: center;
+
+    /* NSEF.
+       Se establecen márgenes derecho a 0px por criterio de estética
+       del autor. */
+    margin-right: 0px;
+  }
+
+  header {
+    /* NSEF.
+       Se establece altura de 120px de la sección de cabecera en versión 
+       para móviles por criterio de estética del autor. */
+    height: 120px;
+    width: 100%;
+  }
+
+  nav {
+    /* CONSIDERACION FINAL.
+       Solo para la versión móvil muestra centrado el menú y debajo del 
+       título. */
+    text-align: center;
+  } 
 }
 
 
@@ -110,9 +172,8 @@ header {
 
   /* NSEF. 
       Se establece ancho del header o cabecera por defecto al 100% del
-      DIV contenedor y altura del header de 60px por criterio estético. */
+      DIV contenedor. */
   width: 100%;
-  height: 60px;
 
 }
 
@@ -133,9 +194,7 @@ header span {
   float: left;
 
   /* NSEF. 
-     Se establece margen de 15px arriba y a la izquierda por criterio
-     estético. */
-  margin-left: 15px;
+     Se establece margen de 15px arriba por criterio estético. */
   margin-top: 15px;
 }
 
@@ -148,7 +207,6 @@ header span {
   /* NSEF. 
      Se establece margen de 15px arriba y a la derecha por criterio
      estético. */
-  margin-right: 15px;
   margin-top: 15px;
 }
 
@@ -200,42 +258,6 @@ header span {
      Fuente en negrita para el enlace de la página actual en el 
      NavMenu. */
   font-weight: bold; 
-}
-
-
-@media (max-width: 580px) {
-  .contenido {
-    width: 100%;
-    margin: 0 auto;
-    min-width: 300px;
-
-
-  }
-
-  .cabecera_ttl {
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-    margin-left: 0px;
-  }
-
-  .cabecera_nav {
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-    margin-right: 0px;
-  }
-
-  header {
-    background-color:  #5b7989;
-    border-radius: 10px 10px 0 0;
-    width: 100%;
-    height: 120px;
-  }
-
-  nav {
-    text-align: center;
-  } 
 }
 
 .imagen_secundaria {
@@ -478,5 +500,46 @@ footer img {
   -o-filter:      grayscale(100%);
   -ms-filter:     grayscale(100%);
   filter:         grayscale(100%); 
+}
+
+/***************************** CONSIDERACION FINAL ***************************/
+/****************** Animación SlideIn del contenedor principal ***************/
+/* Se agregan diferentes prefijos a propiedad keyframes para aumentar la
+  compatilibilidad con la mayoria de los navegadores web. */
+@-webkit-keyframes MCSlideInAnim {
+  0% { margin-top: 150%; }
+  60% { margin-top: -5%; }
+  100% {margin-top: 0%;  }
+}
+@-moz-keyframes MCSlideInAnim {
+  0% { margin-top: 150%; }
+  60% { margin-top: -5%; }
+  100% {margin-top: 0%;  }
+}
+@-o-keyframes MCSlideInAnim {
+  0% { margin-top: 150%; }
+  60% { margin-top: -5%; }
+  100% {margin-top: 0%;  }
+}
+
+@-ms-keyframes MCSlideInAnim {
+  0% { margin-top: 150%; }
+  60% { margin-top: -5%; }
+  100% {margin-top: 0%;  }
+}
+
+@keyframes MCSlideInAnim {
+  0% { margin-top: 150%; }
+  60% { margin-top: -5%; }
+  100% {margin-top: 0%;  }
+}
+
+/* Se registra la animación en el contenedor principal. */
+.contenido {
+  -webkit-animation: MCSlideInAnim 1s;
+  -moz-animation:    MCSlideInAnim 1s;
+  -o-animation:      MCSlideInAnim 1s;
+  -ms-animation:     MCSlideInAnim 1s;
+  animation:         MCSlideInAnim 1s;
 }
 
