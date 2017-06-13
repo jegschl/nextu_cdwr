@@ -312,3 +312,25 @@ footer div {
 footer img {
   box-shadow: 0px 0px 0px #02010a;
 }
+
+/************************** Parámetros para GALERIA. *************************/
+.galeria {
+  padding-top: 15px;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+
+  background-color: #C6d5c5;
+}
+
+.glr_item img{
+  min-width: 225px;
+  max-width: 280px;
+}
+
+
