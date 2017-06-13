@@ -333,4 +333,27 @@ footer img {
   max-width: 280px;
 }
 
+.glr_itm01 img {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
 
+.glr_itm02 img {
+  -webkit-filter: grayscale(60%); 
+  filter: grayscale(60%); 
+}
+
+.glr_itm03 img {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+.glr_itm04 img {
+  -webkit-filter: grayscale(80%); 
+  filter: grayscale(80%); 
+}
+
+.glr_itm06 img {
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%); 
+}
