@@ -1,9 +1,30 @@
 /**********************************************************************
+  
   Santiago, 10/06/2017.
 
   Página de estilos CSS para Evaluación Final del nivel "CSS y 
   Diseño Web Responsive" (CDWR_EF). 
 
+  Consideraciones del autor:
+  1.- En lo posible se trata de indicar la relación de cada regla o asigna-
+      ción de propiedad con cada requerimiento solicitado por la evaluación.
+  2.- Esta señalización o indicación empieza con título en mayúsculas que
+      hace referencia a la parte de la evaluación en donde se especifica
+      el requerimiento.
+  3.- Hay reglas o asignación de propiedades que no son solicitadas en la 
+      la evaluación y los criterios de uso de estas reglas pueden ser los
+      siguientes:
+        * Necesidad indirecta de requerimiento de la evaluación.
+        * Visualización adecuada para el proyecto;
+      Estas reglas o asignaciones se indican con título NSEF (Abreviatura
+      de No Solicitado en la Evaluación Final). Estas asignaciones van
+      siempre de último en cada regla.
+  4.- En algunas propiedades se indican su propiedad correspondiente con
+      prefijo (-webkit, -moz, -o, -ms, etc.) de proveedor de navegador 
+      para aumentar la compatibilidad con la mayoría de los navegadores 
+      web.
+
+  Autor: Jorge Elieser Garrido Sejas;
 
 **********************************************************************/
 
@@ -11,7 +32,8 @@
 /* CONSIDERACIONES GENERALES. 
    1.- Utiliza la tipografía Dancing Script. */
 @font-face {
-    /* Importando la fuente para cumplir con el punto 1 de las
+    /* CONSIDERACIONES GENERALES.
+       Importando la fuente para cumplir con el punto 1 de las
        consideraciones generales. */
     font-family: DancingScript;
     src: url("../fuentes/DancingScript-Regular.otf") format("opentype");
@@ -26,6 +48,7 @@ body {
          punto 1 de las consideraciones generales. */
   font-family: DancingScript;
 
+  /* NSEF. Fuentes en toda la página de tamaño de 25px por defeto. */
   font-size: 25px;
 }
 
@@ -57,6 +80,7 @@ img {
        dientes para centrar el DIV contenedor y cumplir con el re-
        querimiento del punto 4 de las consideraciones generales. */
     margin: 0 auto;
+
   }
 }
 
@@ -69,6 +93,10 @@ img {
        Se señala ancho de 100% para cumplir con requerimiento del
        punto 4 de las consideraciones generales. */
     width: 100%;
+    margin: 0 auto;
+
+
+
   }
 }
 
@@ -80,6 +108,9 @@ header {
      superiores a 10px. */
   border-radius: 10px 10px 0 0;
 
+  /* NSEF. 
+      Se establece ancho del header o cabecera por defecto al 100% del
+      DIV contenedor y altura del header de 60px por criterio estético. */
   width: 100%;
   height: 60px;
 
@@ -90,6 +121,8 @@ header span {
      #02010a. */
   text-shadow: 2px 2px 2px #02010a;
 
+  /* NSEF. 
+     Color de fuente blanco en el título de la cabecera. */
   color: white;
 }
 
@@ -99,6 +132,9 @@ header span {
      con la fotografía". */
   float: left;
 
+  /* NSEF. 
+     Se establece margen de 15px arriba y a la izquierda por criterio
+     estético. */
   margin-left: 15px;
   margin-top: 15px;
 }
@@ -109,12 +145,20 @@ header span {
      sitio. */
   float: right;
 
+  /* NSEF. 
+     Se establece margen de 15px arriba y a la derecha por criterio
+     estético. */
   margin-right: 15px;
   margin-top: 15px;
 }
 
 #imagenes {
+  /* NSEF. 
+     Se ocupa todo el ancho disponible del contenedor para la sección  
+     de las imágenes. */
   width:100%;
+  /* NSEF. 
+     También se centra esta sección. */
   margin 0 auto;
 }
 
@@ -122,7 +166,10 @@ header span {
   /* IMAGEN CENTRAL. Establece como color de fondo #82c3a6. */
   background-color: #82c3a6;
 
-  padding-bottom: 10px; /* sin solicitar en la EF */
+  /* NSEF. 
+     Se establece padding en la parte inferior del DIV de la imagen 
+     central. */
+  padding-bottom: 10px; 
 }
 
 .imagen_central img {
@@ -143,12 +190,15 @@ header span {
   left: 5%;
 }
 
-/* Nav Menu Activo: Enlaces del menú activo sin subrayado. */
+/* CABECERA.
+   Nav Menu Activo: Enlaces del menú activo sin subrayado. */
 .nma {
   /* CABECERA. La página actual debe tener estilo sin subrayado. */
   text-decoration-line: none;
 
-  /* sin solicitar en la EF */
+  /* NSEF.
+     Fuente en negrita para el enlace de la página actual en el 
+     NavMenu. */
   font-weight: bold; 
 }
 
@@ -157,6 +207,9 @@ header span {
   .contenido {
     width: 100%;
     margin: 0 auto;
+    min-width: 300px;
+
+
   }
 
   .cabecera_ttl {
@@ -200,9 +253,9 @@ header span {
   background-color:  #d5c75f;
   border-width: 1px;
 
-  /* Centra el sistema Flexbox */
+  /*  NSEF.
+      Centra el sistema Flexbox */
   justify-content: center;
-  
   width: 100%;
 }
 
@@ -236,10 +289,15 @@ header span {
      de paisaje y de retrato. */
   box-shadow: 2px 2px 5px #82c3a6;
 
+  /* NSEF.
+     Se establece asignaciones de propiedades decorativas al borde
+     de cada imagen en el index.html. */
   border-width: 2px;
   border-style: solid;
   border-color: gray;
   
+  /* NSEF.
+     Margenes por criterio estético. */
   margin-top: 15px;
   margin-bottom: : 15px;
 
@@ -298,11 +356,17 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   
+  /* NSEF.
+     Se disminuye un poco el tamaño de fuente para la sección footer por
+     criterio estético del autor. */
   font-size: 0.6em;
   width: 100%;
 }
 
 footer div {
+  /* NSEF.
+     Se asignan anchura mínima, anchura relativa y márgenes moderados a cada
+     columna en el pié de página por criterio estético del autor. */
   min-width: 200px;
   width: 23%;
   margin-left: 2px;
@@ -310,50 +374,109 @@ footer div {
 }
 
 footer img {
+  /* NSEF.
+     Se  quita la sombra en las imágenes de los logotipos de las redes
+     sociales ya que la combra venía por defecto desde la etiqueta IMG
+     global. */
   box-shadow: 0px 0px 0px #02010a;
 }
 
 /************************** Parámetros para GALERIA. *************************/
 .galeria {
-  padding-top: 15px;
+  /* GALERIA.
+     La galería debe mostraste en tres columnas para desktop y en una para
+     móvil. Las siguientes propiedades contínuas establecen la configuración
+     base del flex para mostrar las columnas necesarias en el caso de móviles
+     o desktop. Algunas poropiedades como justify-content se investigaron 
+     fuera de NextU para simplicidad de desarrollo. */
   display: flex;
   display: -webkit-flex;
   display: -ms-flexbox;
-
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: space-around;
+  
+  /* NSEF.
+     Se indica el mismo color que la sección de imágenes del index.html para
+     la galería de imágenes. Se asume por criterio estético del autor. */
+  background-color:  #d5c75f;
 
-  background-color: #C6d5c5;
+  /* NSEF.
+     Se agrega espacio por  padding por criterio estético del autor. */
+  padding-top: 15px;
 }
 
 .glr_item img{
+  /* GALERIA.
+     Estableciendo las 2 siguientes propiedades se logra que el flexbox de 
+     la galería se comporte según requerimiento solicitado para la evaluación
+     de 3 columnas en desktop y 1 para móviles. */
   min-width: 225px;
   max-width: 280px;
 }
 
 .glr_itm01 img {
+  /* GALERIA.
+     Las siguientes propiedades establecen el efecto blur en 10px para la
+     imagen 1 de la galería satisfaciendo el requerimiento de efectos en 
+     la galería de imágenes. Se agregan propiedades con prefijos para 
+     aumentar compatibildad con navegadores web.*/
   -webkit-filter: blur(10px);
-  filter: blur(10px);
+  -moz-filter:    blur(10px);
+  -o-filter:      blur(10px);
+  -ms-filter:     blur(10px);
+  filter:         blur(10px);
 }
 
 .glr_itm02 img {
+  /* GALERIA.
+     Las siguientes propiedades establecen el efecto grayscale en 60% para
+     la imagen 2 de la galería satisfaciendo el requerimiento de efectos en 
+     la galería de imágenes. Se agregan propiedades con prefijos para 
+     aumentar compatibildad con navegadores web. */
   -webkit-filter: grayscale(60%); 
-  filter: grayscale(60%); 
+  -moz-filter:    grayscale(60%);
+  -o-filter:      grayscale(60%);
+  -ms-filter:     grayscale(60%);
+  filter:         grayscale(60%); 
 }
 
 .glr_itm03 img {
+  /* GALERIA.
+     Las siguientes propiedades establecen el efecto sepia en 90% para
+     la imagen 3 de la galería satisfaciendo el requerimiento de efectos en 
+     la galería de imágenes. Se agregan propiedades con prefijos para 
+     aumentar compatibildad con navegadores web.*/
   -webkit-filter: sepia(90%);
-  filter: sepia(90%);
+  -moz-filter:    sepia(90%);
+  -o-filter:      sepia(90%);
+  -ms-filter:     sepia(90%);
+  filter:         sepia(90%);
 }
 
 .glr_itm04 img {
+  /* GALERIA.
+     Las siguientes propiedades establecen el efecto grayscale en 80% para
+     la imagen 4 de la galería satisfaciendo el requerimiento de efectos en 
+     la galería de imágenes. Se agregan propiedades con prefijos para 
+     aumentar compatibildad con navegadores web.*/
   -webkit-filter: grayscale(80%); 
+  -moz-filter:    grayscale(80%);
+  -o-filter:      grayscale(80%);
+  -ms-filter:     grayscale(80%);
   filter: grayscale(80%); 
 }
 
 .glr_itm06 img {
+  /* GALERIA.
+     Las siguientes propiedades establecen el efecto grayscale en 80% para
+     la imagen 6 de la galería satisfaciendo el requerimiento de efectos en 
+     la galería de imágenes. Se agregan propiedades con prefijos para 
+     aumentar compatibildad con navegadores web.*/
   -webkit-filter: grayscale(100%); 
-  filter: grayscale(100%); 
+  -moz-filter:    grayscale(100%);
+  -o-filter:      grayscale(100%);
+  -ms-filter:     grayscale(100%);
+  filter:         grayscale(100%); 
 }
+
