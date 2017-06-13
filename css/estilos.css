@@ -1,0 +1,314 @@
+/**********************************************************************
+  Santiago, 10/06/2017.
+
+  Página de estilos CSS para Evaluación Final del nivel "CSS y 
+  Diseño Web Responsive" (CDWR_EF). 
+
+
+**********************************************************************/
+
+/***************** 1.- Consideraciones Generales *********************/
+/* CONSIDERACIONES GENERALES. 
+   1.- Utiliza la tipografía Dancing Script. */
+@font-face {
+    /* Importando la fuente para cumplir con el punto 1 de las
+       consideraciones generales. */
+    font-family: DancingScript;
+    src: url("../fuentes/DancingScript-Regular.otf") format("opentype");
+}
+
+body {
+  /* CONSIDERACIONES GENERALES. 
+     2.- Establece el color de fondo negro #02010a. */
+  background-color: #02010a;
+  /* CONSIDERACIONES GENERALES. 
+     1.- Se establece la fuente importada para cumplir con el 
+         punto 1 de las consideraciones generales. */
+  font-family: DancingScript;
+
+  font-size: 25px;
+}
+
+/* CONSIDERACIONES GENERALES. 
+   3.- Cada imagen tiene un efecto de sombra de 2px 
+       con color #02010a. */
+img {
+  box-shadow: 2px 2px 2px #02010a;
+}
+
+/* CONSIDERACIONES GENERALES. 
+   4.- Crea un div llamado contenido que este centrado y que tenga 
+       máximo 900px de ancho para desktop y ocupará el 100% para 
+       móviles.  
+   5.- Utiliza media queries para manejar dos tamaños Desktop: con
+       ancho de 900px o más y móvil con menos de 900px. */
+
+/* CONSIDERACIONES GENERALES. 
+   Se especifica media queries para cumplir con punto 5 de las
+   consideraciones generasl. */
+@media (min-width: 900px) {
+  .contenido {
+    /* CONSIDERACIONES GENERALES. 
+       Se señala ancho de 900px para cumplir con requerimiento del
+       punto 4 de las consideraciones generales. */
+    width: 900px;
+    /* CONSIDERACIONES GENERALES. 
+       Se especifica la siguiente propiedad con valores correspon-
+       dientes para centrar el DIV contenedor y cumplir con el re-
+       querimiento del punto 4 de las consideraciones generales. */
+    margin: 0 auto;
+  }
+}
+
+/* CONSIDERACIONES GENERALES. 
+   Se especifica media queries para cumplir con punto 5 de las
+   consideraciones generales. */
+@media (min-width: 581px and max-width: 899px) {
+  .contenido {
+    /* CONSIDERACIONES GENERALES. 
+       Se señala ancho de 100% para cumplir con requerimiento del
+       punto 4 de las consideraciones generales. */
+    width: 100%;
+  }
+}
+
+
+header {
+  /* CABECERA. Establece el fondo de color #5b7989. */
+  background-color:  #5b7989;
+  /* CABECERA. Aplica bordes redondeados en las esquinas
+     superiores a 10px. */
+  border-radius: 10px 10px 0 0;
+
+  width: 100%;
+  height: 60px;
+
+}
+
+header span {
+  /* CABECERA.  la letra debe tener una sombra de 2px de color
+     #02010a. */
+  text-shadow: 2px 2px 2px #02010a;
+
+  color: white;
+}
+
+.cabecera_ttl {
+  /* CABECERA. Se especifica propiedad "float: left" para cumplir con
+     requerimiento de aliniear a la izquierda el título "Comenzando
+     con la fotografía". */
+  float: left;
+
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.cabecera_nav {
+  /* CABECERA. Se especifica propiedad "float: right" para cumplir con
+     requerimiento de aliniear a la derecha el menú de navegación del
+     sitio. */
+  float: right;
+
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+#imagenes {
+  width:100%;
+  margin 0 auto;
+}
+
+.imagen_central{
+  /* IMAGEN CENTRAL. Establece como color de fondo #82c3a6. */
+  background-color: #82c3a6;
+
+  padding-bottom: 10px; /* sin solicitar en la EF */
+}
+
+.imagen_central img {
+  /* CONSIDERACIONES GENERALES. 
+     6.- Las imágenes deben ser responsivas. Se considera
+         medida en porcentaje de ancho de imagen en la sección
+         de la imagen central para cumplir con punto 6 de las
+         consideraciones generales. */
+  width: 90%;
+
+  margin-top: 15px;
+  /* IMAGEN CENTRAL.
+     Centrando la imagen en la posición left determinada
+     por el 5% que es la diferencia del ancho de la
+     caja ancestro (position: relative) con la del tamaño
+     de la imagen. */
+  position: relative;
+  left: 5%;
+}
+
+/* Nav Menu Activo: Enlaces del menú activo sin subrayado. */
+.nma {
+  /* CABECERA. La página actual debe tener estilo sin subrayado. */
+  text-decoration-line: none;
+
+  /* sin solicitar en la EF */
+  font-weight: bold; 
+}
+
+
+@media (max-width: 580px) {
+  .contenido {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cabecera_ttl {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+
+  .cabecera_nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 0px;
+  }
+
+  header {
+    background-color:  #5b7989;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 120px;
+  }
+
+  nav {
+    text-align: center;
+  } 
+}
+
+.imagen_secundaria {
+  /* IMAGEN SECUNDARIA.
+     Esta sección es a dos columnas usando flex para desktop y
+     una columna para móvil. */
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-direction:row;
+  flex-wrap:wrap;
+
+  /* IMAGEN SECUNDARIA.
+     Aplica como color de fondo #d5c75f y un borde de 1px. */
+  background-color:  #d5c75f;
+  border-width: 1px;
+
+  /* Centra el sistema Flexbox */
+  justify-content: center;
+  
+  width: 100%;
+}
+
+
+.imagen_secundaria img {
+  /* CONSIDERACIONES GENERALES. 
+     6.- Las imágenes deben ser responsivas. Se considera
+         medida en porcentaje de ancho de imagen en la sección
+         de la imagen secundaria para cumplir con punto 6 de las
+         consideraciones generales.*/
+  width: 90%; 
+  /* CONSIDERACIONES GENERALES. 
+     También se especifica la propiedad  max-width para sa-
+     tisfacer requerimiento de imágenes responsivas visual-
+     mente correctas y cumplir con punto 6 de las considera-
+     ciones generales. */
+  max-width: 400px;
+
+  /* IMAGEN SECUNDARIA. 
+     Estableciendo transiciones para efectos animados de imágenes
+     secundarias. Algunas propiedades se investigaron fuera del
+     curso de NextU para proporcionar compatibilidad para mayoría
+     de navegadores.*/
+  -webkit-transition: all 100ms ease;
+  -moz-transition:    all 100ms ease;
+  -ms-transition:     all 100ms ease;
+  transition:         all 100ms ease;
+
+  /* IMAGEN SECUNDARIA.
+     Agrega color de sombra #82c3a6 y borde 2px. Igual para imagen
+     de paisaje y de retrato. */
+  box-shadow: 2px 2px 5px #82c3a6;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: gray;
+  
+  margin-top: 15px;
+  margin-bottom: : 15px;
+
+}
+
+.imsec {
+  /* IMAGEN SECUNDARIA.
+     Cada columna debe tener una imagen centrada. La siguiente
+     propiedad sirve para centrar cada imagen en las celdas del 
+     sistema Flexbox. */
+  text-align: center;
+}
+
+
+.is01:hover {
+  /* IMAGEN SECUNDARIA.
+     Aplica un efecto de rotación de 10 grados cuando se coloca 
+     el puntero sobre ella (Imagen de paisajes ubicada a la 
+     izquierda). Algunas propiedades se investigaron fuera del
+     curso de NextU para proporcionar compatibilidad para mayoría
+     de navegadores.*/
+  -webkit-transform:  rotate(10deg);
+  -moz-transform:     rotate(10deg);
+  -ms-transform:      rotate(10deg);
+  transform:          rotate(10deg);
+}
+
+.is02:hover {
+  /* IMAGEN SECUNDARIA.
+      aplica un efecto de traslación de 5px hacia arriba y 20px a 
+      la derecha cuando se coloca el puntero del ratón sobre ella
+      (imagen de retrato ubicada a la derecha). Algunas propiedades 
+      se investigaron fuera del curso de NextU para proporcionar 
+      compatibilidad para mayoría de navegadores.*/
+  -webkit-transform:  translate(20px,-5px);
+  -moz-transform:     translate(20px,-5px);
+  -ms-transform:      translate(20px,-5px);
+  transform:          translate(20px,-5px);
+
+}
+
+footer {
+  /* PIE DE PAGINA.
+     Aplica bordes redondeados en las esquinas inferiores a 10px. */
+  border-radius: 0px 0px 10px 10px;
+
+  /* PIEDE PAGINA.
+     Aplica el color de fondo #C6d5c5. */
+  background-color:  #C6d5c5;
+
+  /* PIE DE PAGINA. 
+     El pie debe estar a cuatro columnas en desktop y 
+     una columna en móvil. */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  font-size: 0.6em;
+  width: 100%;
+}
+
+footer div {
+  min-width: 200px;
+  width: 23%;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+footer img {
+  box-shadow: 0px 0px 0px #02010a;
+}
